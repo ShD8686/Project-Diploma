@@ -1,0 +1,14 @@
+digraph G { rankdir=LR; nodesep=0.35; ranksep=0.9; node [fontname="DejaVu Sans" fontsize=12 style="filled,rounded" shape=box penwidth=1.4]; edge [fontname="DejaVu Sans" fontsize=10 color="#555555"];
+ ped [label="Pedestrian
+(student, resident, elderly,
+parent with stroller)" fillcolor="#E8F0FC" color="#0A5AC8"]; ext [label="External client
+(app, script)" fillcolor="#E8F0FC" color="#0A5AC8"]; res [label="Researcher /
+urban planner" fillcolor="#E8F0FC" color="#0A5AC8"];
+ sys [label="Shaded pedestrian
+routing system
+(Go + Python)" fillcolor="#0A5AC8" fontcolor=white fontsize=14 color="#0A5AC8"];
+ osm [label="OpenStreetMap
+(road graph, buildings)" fillcolor="#F2F2F2" color="#888888"]; hts [label="Building height data
+(OSM / Astana open data)" fillcolor="#F2F2F2" color="#888888"]; tiles [label="Map tile
+provider" fillcolor="#F2F2F2" color="#888888"];
+ ped -> sys; ext -> sys; res -> sys; osm -> sys; hts -> sys; tiles -> sys [dir=both]; }
