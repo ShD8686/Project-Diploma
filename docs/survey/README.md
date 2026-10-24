@@ -1,0 +1,1 @@
+Survey materials. `survey-en.md` - questionnaire and analysis plan (documentation); `survey-ru.md` - the Russian form given to respondents; `interview-guide.md` - guide for 3-5 discussions; `results/` - anonymised data and summary (TODO).
