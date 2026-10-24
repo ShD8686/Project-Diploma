@@ -1,0 +1,16 @@
+digraph G { rankdir=TB; nodesep=0.5; ranksep=0.7; node [fontname="DejaVu Sans" fontsize=12 style="filled,rounded" shape=box penwidth=1.4]; edge [fontname="DejaVu Sans" fontsize=10 color="#555555"];
+ web [label="Web client
+(MapLibre GL JS)" fillcolor="#E8F0FC" color="#0A5AC8"];
+ api [label="Go: REST API +
+routing service" fillcolor="#0A5AC8" fontcolor=white color="#0A5AC8"];
+ mem [label="in-memory graph
++ per-slot weights" shape=note fillcolor="#FFFFFF" color="#0A5AC8"];
+ db [label="PostgreSQL + PostGIS
+(graph, buildings, edge_shade)" shape=cylinder fillcolor="#FFF4D6" color="#B8860B"];
+ py [label="Python: shadow module
+(Shapely + pvlib)" fillcolor="#DFF3E3" color="#2E7D32"]; ld [label="Python: OSM / height
+loader" fillcolor="#DFF3E3" color="#2E7D32"];
+ ev [label="Evaluation scripts
+(eval/)" fillcolor="#F2F2F2" color="#888888"]; osm [label="OSM / heights" shape=box fillcolor="#F2F2F2" color="#888888"];
+ web -> api [label="REST / GeoJSON"]; ev -> api [label="REST"]; api -> mem [style=dashed]; api -> db [label="load (start / update)"];
+ osm -> ld; ld -> db; py -> db [label="edge_shade(slot)"]; db -> py [label="buildings"]; {rank=same; py; ld; } }

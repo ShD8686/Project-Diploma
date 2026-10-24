@@ -1,0 +1,31 @@
+Summary,Type,Priority,Assignee,Description
+"Create GitHub repository, add supervisor and committee access",Task,Critical,Damir,"Repo created; README, docs, .gitignore committed; supervisor invited. AC: repo opens for supervisor."
+Create YouTrack project SHADE and import tasks,Task,Critical,Damir,"Project exists, tasks from this list created, supervisor added. AC: board shows tasks with assignee, AC, deadline."
+Proposal and scope (docs/01),Task,Critical,Damir,"Title, problem, users, aim, objectives, outcomes, scope in docs/01-proposal.md. AC: supervisor confirms scope."
+Run survey: >=100 responses,Task,Critical,Damir,"Form built from docs/survey/survey-ru.md, shared among students and residents. AC: >=100 responses or a stated reason + current count."
+3-5 discussions with user representatives,Task,Critical,Damir,Interview guide used; table in docs/02 filled; findings linked to requirements. AC: >=3 rows filled.
+Literature review: complete analysis table for 12 sources,Task,Major,Damir,"All 12 rows in docs/03 with method, result, limitation. AC: no TODO rows."
+"Check apps and add screenshots (Cool Routes, HEAL, Yandex, Google)",Task,Major,Damir,Screenshots in docs/evidence/; evidence levels in docs/04 updated. AC: levels B/C/D replaced by A where checked.
+Existing systems comparison (docs/04),Task,Major,Damir,5 systems x 8 criteria with evidence levels. AC: every claim has a source or a level.
+Technology comparison (docs/05),Task,Major,Damir,"5 decisions with 2-3 alternatives each, justified by requirements."
+Requirements specification (docs/06),Task,Critical,Damir,FR/NFR with priority and measurable acceptance criteria. AC: each Must has a test method.
+Architecture diagrams (docs/07),Task,Major,Damir,"Context, use case, component diagrams with editable sources. AC: sources render with dot."
+UX prototype / mock-up (docs/08),Task,Major,Damir,Mock-up and API examples. Optional: clickable prototype.
+Verification and evaluation plan (docs/09),Task,Major,Damir,"Baselines, metrics M1-M7, conditions, statistics."
+Check OSM building-height coverage for the pilot district (Overpass),Task,Major,Damir,Share of buildings with height or building:levels computed; result in docs/10 risks (R1).
+Send documents to supervisor and record feedback,Task,Critical,Damir,Link to repo tag sent; comments and decisions in docs/11. AC: >=1 comment with decision and linked commit.
+Tag prob-period-1 and prepare submission summary,Task,Critical,Damir,"Tag created; summary: repo link, tag, completed work, limitations, open tasks."
+M-A: Data and graph for pilot district,Epic,Major,Damir,"Pilot district in PostGIS, connectivity >=98%, height share computed."
+M-B: Shadow module (Python),Epic,Major,Damir,"Sun position <=1 deg, precompute slots, first field check."
+M-C: Router and API (Go),Epic,Major,Damir,"lambda=0 equals shortest, OpenAPI valid, matches NetworkX reference."
+M-D: Web client (MapLibre),Epic,Major,Damir,3 scenarios pass manual test.
+M-E: Evaluation,Epic,Major,Damir,"Metrics M1-M7 measured, report ready."
+M-F: Defence,Epic,Major,Damir,"Text, demo, reproducible repo (docker compose up <=30 min)."
+FR-2: shade fraction per edge and slot (Python),Task,Critical,Damir,"AC: >=85% agreement on >=60 control points, 3 times of day."
+FR-3/FR-4: cost function and three route modes (Go),Task,Critical,Damir,"AC: lambda=0 = shortest in 50/50 pairs; shade share = recount, error <=1%."
+FR-6: REST API with OpenAPI,Task,Critical,Damir,"AC: schema valid, contract tests 100%."
+FR-1/FR-5: web client,Task,Critical,Damir,"AC: points, date, time, lambda, coloured routes; 10/10 manual UI tests."
+NFR-4: docker compose up reproducibility,Task,Major,Damir,"AC: clean machine, <=30 min following README."
+R1: no building heights in OSM,Risk,Critical,Damir,"Trigger: <50% buildings with height. Response: levels x 3 m, manual heights for pilot."
+R2: pedestrian network incomplete,Risk,Critical,Damir,Trigger: connectivity <98%. Response: auto check + OSM edits.
+R5: field validation weather/time,Risk,Major,Damir,Start early; fallback >=30 points.

@@ -1,0 +1,24 @@
+digraph G { rankdir=LR; nodesep=0.25; ranksep=1.6; node [fontname="DejaVu Sans" fontsize=12]; edge [color="#555555" arrowhead=none];
+ped [label="Pedestrian" shape=box style="filled,rounded" fillcolor="#E8F0FC" color="#0A5AC8"];
+ext [label="External client" shape=box style="filled,rounded" fillcolor="#E8F0FC" color="#0A5AC8"];
+res [label="Researcher / urban planner" shape=box style="filled,rounded" fillcolor="#E8F0FC" color="#0A5AC8"];
+subgraph cluster_s { label="Shaded pedestrian routing system (Go + Python)"; fontname="DejaVu Sans"; color="#0A5AC8"; style=rounded;
+u0 [label="Build a route" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+u1 [label="Set λ and detour limit" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+u2 [label="Compare 3 modes" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+u3 [label="Show shade on map" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+u4 [label="Export route" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+u5 [label="Load district data" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+u6 [label="Evaluate vs baseline" shape=ellipse style=filled fillcolor="#FFFFFF" color="#0A5AC8"];
+}
+ped -> u0;
+ped -> u1;
+ped -> u2;
+ped -> u3;
+ped -> u4;
+ext -> u0;
+ext -> u3;
+ext -> u4;
+res -> u5;
+res -> u6;
+}
